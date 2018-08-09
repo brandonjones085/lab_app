@@ -1,0 +1,16 @@
+###create sqlite3 temp and humidity database
+
+sqlite3 lab_app.db
+begin; 
+create table temperatures (rDatetime dateimte, sensorID text, temp numeric); 
+insert into temperatures values (datetime(CURRENT_TIMESTAMP), "1",25); 
+insert into temperatures values (datetime(CURRENT_TIMESTAMP), "1",25.10); 
+commit;
+
+##create humidity table
+
+begin; 
+create table humidities (rDatetime datetime, sensorID text, hum numeric); 
+insert into humidities values (datetime(CURRENT_TIMESTAMP), "1", 51); 
+insert into humidities values (datetime(CURRENT_TIMESTAMP), "1", 51.10); 
+commit; 
